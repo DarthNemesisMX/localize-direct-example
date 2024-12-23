@@ -1,115 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Localize Direct - Global Localization Services</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #0056b3;
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
-        }
-        section {
-            margin: 1rem auto;
-            max-width: 900px;
-            padding: 1.5rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            color: #0056b3;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
-            text-indent: -1.5rem;
-        }
-        ul li:before {
-            content: "✓";
-            color: #0056b3;
-            padding-right: 0.5rem;
-        }
-        footer {
-            background-color: #0056b3;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-        .cta {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.8rem 1.5rem;
-            background-color: #28a745;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            text-align: center;
-        }
-        .cta:hover {
-            background-color: #218838;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>LocalizeDirect - Our Services</title>
+  <style>
+    body {
+      margin: 0; 
+      padding: 0; 
+      font-family: Arial, sans-serif; 
+      background-color: #f9f9f9; 
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #0056b3;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    main {
+      max-width: 1000px;
+      margin: 1rem auto;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #0056b3;
+      margin-top: 0;
+    }
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0.8rem 0;
+    }
+    ul li {
+      margin-bottom: 0.6rem;
+      padding-left: 1.5rem;
+      text-indent: -1.5rem;
+    }
+    ul li::before {
+      content: "✓ ";
+      color: #0056b3;
+    }
+    select {
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+    footer {
+      background-color: #0056b3;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #28a745;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .cta:hover {
+      background-color: #218838;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Localize Direct</h1>
-        <p>Your Partner for Flawless Global Localization</p>
-    </header>
+  <header>
+    <h1 id="title"></h1>
+    <p id="subtitle"></p>
+    <select id="languageSelect" onchange="changeLanguage()">
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="it">Italiano</option>
+      <option value="de">Deutsch</option>
+      <option value="es">Español</option>
+    </select>
+  </header>
+  
+  <main>
+    <!-- MACHINE TRANSLATION -->
     <section>
-        <h2>Why Choose Localize Direct?</h2>
-        <p>At Localize Direct, we deliver flawless localization that resonates with global audiences. Our professional linguists ensure your content is adapted to maintain cultural, emotional, and technical integrity.</p>
-        <ul>
-            <li><strong>Comprehensive Services:</strong> From translation to LQA, every step ensures precision and quality.</li>
-            <li><strong>Certified Professionals:</strong> Our team consists of native, experienced linguists specialized in gaming localization.</li>
-            <li><strong>Cultural Sensitivity:</strong> We align your content with local norms to avoid cultural missteps.</li>
-            <li><strong>Cutting-Edge Tools:</strong> Advanced CAT tools and workflows for unmatched efficiency.</li>
-            <li><strong>Data Security:</strong> GDPR compliance and NDA agreements safeguard your content.</li>
-        </ul>
+      <h2 id="mtTitle"></h2>
+      <p id="mtDesc"></p>
+      <ul id="mtBullets"></ul>
+      <p id="mtNote"></p>
     </section>
+
+    <!-- MTPE -->
     <section>
-        <h2>Our Services</h2>
-        <h3>Translation Services</h3>
-        <ul>
-            <li><strong>Machine Translation (MT):</strong> Fast, scalable, and confidential solutions tailored for internal content.</li>
-            <li><strong>Machine Translation Post-Editing (MTPE):</strong> Combining speed with human expertise for quality refinements.</li>
-            <li><strong>Standard Translation:</strong> ISO 17100:2015 compliant, culturally accurate translations by native experts.</li>
-        </ul>
-        <h3>Value-Added Services</h3>
-        <ul>
-            <li><strong>Transcreation:</strong> Creative adaptation for impactful and culturally relevant messaging.</li>
-            <li><strong>LQA:</strong> In-context linguistic quality assurance for error-free user experiences.</li>
-            <li><strong>Terminology Management:</strong> Ensuring consistent and accurate use of terms across all materials.</li>
-        </ul>
+      <h2 id="mtpeTitle"></h2>
+      <p id="mtpeDesc"></p>
+      <ul id="mtpeBullets"></ul>
     </section>
+
+    <!-- STANDARD TRANSLATION -->
     <section>
-        <h2>Why Risk Mistranslations?</h2>
-        <p>Mistranslations and cultural insensitivity can harm your brand’s reputation. By partnering with Localize Direct, you ensure:</p>
-        <ul>
-            <li>Authentic connections with global audiences.</li>
-            <li>Seamless user experiences.</li>
-            <li>Protection from potential backlash or cancellations.</li>
-        </ul>
-        <a href="#" class="cta">Get Started Today</a>
+      <h2 id="stdTransTitle"></h2>
+      <p id="stdTransDesc"></p>
+      <ul id="stdTransBullets"></ul>
     </section>
-    <footer>
-        <p>&copy; 2024 Localize Direct. All Rights Reserved.</p>
-    </footer>
-</body>
-</html>
+
+    <!-- TEP -->
+    <section>
+      <h2 id="tepTitle"></h2>
+      <p id="tepDesc"></p>
+    </section>
+
+    <!-- TRANSCREATION -->
+    <section>
+      <h2 id="transcreationTitle"></h2>
+      <p id="transcreationDesc"></p>
+    </section>
+
+    <!-- LQA -->
+    <section>
+      <h2 id="lqaTitle"></h2>
+      <p id="lqaDesc"></p>
+    </section>
+
+    <!-- PROJECT MANAGEMENT -->
+    <section>
+      <h2 id="pmTitle"></h2>
+      <p id="pmDesc"></p>
+    </section>
+
+    <!-- TERMINOLOGY MANAGEMENT -->
+    <section>
+      <h2 id="termMgmtTitle"></h2>
+      <p id="termMgmtDesc"></p>
+    </section>
+
+    <!-- STYLE GUIDE -->
+    <section>
+      <h2 id="styleGuideTitle"></h2>
+      <p id="styleGuideDesc"></p>
+    </section>
+
+    <!-- SAMPLE TRANSLATION -->
+    <section>
+      <h2 id="sampleTitle"></h2>
+      <p id="sampleDesc"></p>
+    </section>
+
+    <!-- VOICEOVER & AUDIO LOCALIZATION -->
+    <section>
+      <h2 id="voiceTitle"></h2>
+      <p id="voiceDesc"></p>
+    </section>
+
+    <a href="#" class="cta" id="ctaBtn"></a>
+  </main>
+
+  <footer>
+    <p id="footerText"></p>
+  </footer>
+
+  <script>
+    // Concise text for each language (placeholders for FIGS).
+    // In a real scenario, each translation would be carefully localized.
+    const content = {
+      en: {
+        title: "LocalizeDirect",
+        subtitle: "Premier Localization Services for Your Global Audience",
+        footerText: "© 2024 LocalizeDirect. All rights reserved.",
+        ctaBtn: "Contact Us",
+        // --- Machine Translation ---
+        mtTitle: "Machine Translation (MT)",
+        mtDesc: "Secure, high-volume translation using AI-driven NMT engines for non-critical content.",
+        mtBullets: [
+          "Confidentiality Assurance",
+          "Terminology & Context Alignment",
+          "Organized, Ready-to-Use Deliverables",
+          "Client-Centric Workflow",
+          "Customized Prompting Expertise (Add-On)"
+        ],
+        mtNote: "Key Note: We use a standard MT engine but optimize through proprietary workflows.",
+        // --- MTPE ---
+        mtpeTitle: "Machine Translation Post-Editing (MTPE)",
+        mtpeDesc: "Combines speed of MT with human expertise for accurate, contextually correct translations.",
+        mtpeBullets: [
+          "Expert-Led Review for Critical Errors",
+          "Terminology & Context Alignment",
+          "Data Security via NDA",
+          "Tailored Processes",
+          "Scalability & Flexibility"
+        ],
+        // --- Standard Translation ---
+        stdTransTitle: "Standard Translation (ISO 17100:2015)",
+        stdTransDesc: "Human-powered, culturally sensitive translation for content requiring professional standards.",
+        stdTransBullets: [
+          "Native Translators",
+          "Industry Expertise",
+          "Gaming Specialization",
+          "ISO Compliance",
+          "Cultural Sensitivity"
+        ],
+        // --- TEP ---
+        tepTitle: "Translation, Editing & Proofreading (TEP)",
+        tepDesc: "Premium multi-step process ensuring publication-ready results with rigorous QA.",
+        // --- Transcreatio

@@ -1,74 +1,68 @@
-const content = {
-  en: {
-    title: "LocalizeDirect",
-    subtitle: "Premier Localization Services for Your Global Audience",
-    footerText: "© 2024 LocalizeDirect. All rights reserved.",
-    ctaBtn: "Contact Us",
-    // --- Machine Translation ---
-    mtTitle: "Machine Translation (MT)",
-    mtDesc: "Secure, high-volume translation using AI-driven NMT engines for non-critical content.",
-    mtBullets: [
-      "Confidentiality Assurance",
-      "Terminology & Context Alignment",
-      "Organized, Ready-to-Use Deliverables",
-      "Client-Centric Workflow",
-      "Customized Prompting Expertise (Add-On)"
-    ],
-    mtNote: "Key Note: We use a standard MT engine but optimize through proprietary workflows.",
-
-    // --- MTPE ---
-    mtpeTitle: "Machine Translation Post-Editing (MTPE)",
-    mtpeDesc: "Combines speed of MT with human expertise for accurate, contextually correct translations.",
-    mtpeBullets: [
-      "Expert-Led Review for Critical Errors",
-      "Terminology & Context Alignment",
-      "Data Security via NDA",
-      "Tailored Processes",
-      "Scalability & Flexibility"
-    ],
-
-    // --- Standard Translation ---
-    stdTransTitle: "Standard Translation (ISO 17100:2015)",
-    stdTransDesc: "Human-powered, culturally sensitive translation for content requiring professional standards.",
-    stdTransBullets: [
-      "Native Translators",
-      "Industry Expertise",
-      "Gaming Specialization",
-      "ISO Compliance",
-      "Cultural Sensitivity"
-    ],
-
-    // --- TEP ---
-    tepTitle: "Translation, Editing & Proofreading (TEP)",
-    tepDesc: "Premium multi-step process ensuring publication-ready results with rigorous QA.",
-
-    // --- Transcreation ---
-    transcreationTitle: "Transcreation",
-    transcreationDesc: "Creative adaptation preserving intent, tone, and emotional impact for marketing and campaigns.",
-
-    // --- LQA ---
-    lqaTitle: "Linguistic Quality Assurance (LQA)",
-    lqaDesc: "In-context testing to catch cultural, UI, and linguistic issues in real environments.",
-
-    // --- PM ---
-    pmTitle: "Project Management",
-    pmDesc: "Seamless execution from start to finish: planning, vendor coordination, and QA oversight.",
-
-    // --- Terminology Management ---
-    termMgmtTitle: "Terminology Management",
-    termMgmtDesc: "Accurate, context-driven term usage to maintain brand consistency and clarity.",
-
-    // --- Style Guide Creation ---
-    styleGuideTitle: "Style Guide Creation/Adaptation",
-    styleGuideDesc: "Ensures cohesive tone, style, and terminology adapted to local preferences.",
-
-    // --- Sample Translation ---
-    sampleTitle: "Sample Translation",
-    sampleDesc: "Up to 500 words to preview our quality, accuracy, and cultural alignment.",
-
-    // --- Voiceover & Audio Localization ---
-    voiceTitle: "Voiceover & Audio Localization",
-    voiceDesc: "Professional voice talent and multilingual audio production for immersive user experiences."
-  },
-  // Now the fr, it, de, es sections...
-};
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>LocalizeDirect - Our Services</title>
+  <style>
+    body {
+      margin: 0; 
+      padding: 0; 
+      font-family: Arial, sans-serif; 
+      background-color: #f9f9f9; 
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #0056b3;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    main {
+      max-width: 1000px;
+      margin: 1rem auto;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #0056b3;
+      margin-top: 0;
+    }
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0.8rem 0;
+    }
+    ul li {
+      margin-bottom: 0.6rem;
+      padding-left: 1.5rem;
+      text-indent: -1.5rem;
+    }
+    ul li::before {
+      content: "✓ ";
+      color: #0056b3;
+    }
+    select {
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+    footer {
+      background-color: #0056b3;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8re

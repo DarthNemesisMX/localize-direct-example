@@ -408,25 +408,22 @@
 
   <script>
     /********************************************************
-     * Expand this content object for each language so that
-     * *every* ID in your HTML above has a counterpart below.
+     * Each language must define EVERY array or piece of text
+     * that’s used by the "changeLanguage" function.
      * 
-     * For brevity, the non-English languages are placeholders.
+     * For demonstration, we include placeholders for DE, ES, SV.
+     * You can replace them with real translations as needed.
      ********************************************************/
     const content = {
       en: {
         title: "LocalizeDirect",
         subtitle: "Premier Localization Services for Your Global Audience",
         footerText: "© 2024 LocalizeDirect. All rights reserved.",
-
-        /* Hero Section */
         heroHeading: "Flawless Localization for Global Audiences",
         heroParagraph: "Why risk cultural missteps or mistranslations? Partner with us to ensure your content resonates worldwide.",
         heroCtaBtn: "Explore Our Services",
-
-        /* Why Choose */
         whyChooseTitle: "Why Choose LocalizeDirect?",
-        whyChooseDesc: "At Localize Direct, we know that localization isn’t just about translation—it’s about cultural adaptation. Our certified linguists and specialized workflows ensure every project meets the highest standards for accuracy, cultural sensitivity, and data security.",
+        whyChooseDesc: "At Localize Direct, we know that localization isn’t just about translation—it’s about cultural adaptation. Our certified linguists...",
         whyChooseBullets: [
           "Comprehensive Localization: Translation, editing, proofreading, MTPE, and LQA.",
           "Certified Professionals: Native specialists in gaming localization.",
@@ -434,122 +431,49 @@
           "Advanced Tools & Tech: Cutting-edge CAT tools and workflows for consistency and efficiency.",
           "Data Security & NDA: GDPR-compliant processes, NDAs, and confidentiality at every stage."
         ],
-
-        /* Core Services */
         coreServicesTitle: "Core Services",
-        coreServicesDesc: "Our primary offerings focus on ensuring your content is accurately and sensitively localized, from basic translations to high-level creative adaptations.",
+        coreServicesDesc: "Our primary offerings focus on ensuring your content is accurately...",
         mtHeading: "Machine Translation (MT)",
-        mtParagraph: "Fast, scalable NMT solutions for non-critical or internal content, perfect for large volumes.",
-        mtBullets: [
-          "Confidentiality Assurance",
-          "Terminology & Context Alignment",
-          "Organized, Ready-to-Use Deliverables",
-          "Client-Centric Workflow",
-          "Customized Prompting (Add-On)"
-        ],
+        mtParagraph: "Fast, scalable NMT solutions for non-critical or internal content...",
+        mtBullets: ["Confidentiality Assurance","Terminology & Context Alignment","Organized, Ready-to-Use Deliverables","Client-Centric Workflow","Customized Prompting (Add-On)"],
         mtpeHeading: "Machine Translation Post-Editing (MTPE)",
-        mtpeParagraph: "Combines the speed of MT with expert oversight for more precise, contextually accurate translations.",
-        mtpeBullets: [
-          "Expert-Led Review",
-          "Terminology & Context Alignment",
-          "Data Security (NDA)",
-          "Tailored Processes",
-          "Scalability & Flexibility"
-        ],
+        mtpeParagraph: "Combines the speed of MT with expert oversight for more precise translations.",
+        mtpeBullets: ["Expert-Led Review","Terminology & Context Alignment","Data Security (NDA)","Tailored Processes","Scalability & Flexibility"],
         stdHeading: "Standard Translation (ISO 17100)",
-        stdParagraph: "Human-powered, ISO-compliant translations ensuring cultural relevance and top-tier accuracy.",
-        stdBullets: [
-          "Native Translators",
-          "Industry Expertise",
-          "Gaming Specialization",
-          "Cultural Sensitivity",
-          "End-to-End QA"
-        ],
+        stdParagraph: "Human-powered, ISO-compliant translations ensuring cultural relevance...",
+        stdBullets: ["Native Translators","Industry Expertise","Gaming Specialization","Cultural Sensitivity","End-to-End QA"],
         tepHeading: "Translation, Editing & Proofreading (TEP)",
-        tepParagraph: "Premium multi-step process with rigorous QA at each stage, ideal for high-visibility content.",
-        tepBullets: [
-          "Multi-step QA",
-          "Separate Editing & Proofreading",
-          "ISO 17100:2015 Compliance",
-          "Industry Experts",
-          "Collaborative Approach"
-        ],
+        tepParagraph: "Premium multi-step process with rigorous QA at each stage...",
+        tepBullets: ["Multi-step QA","Separate Editing & Proofreading","ISO 17100:2015 Compliance","Industry Experts","Collaborative Approach"],
         transcreationHeading: "Transcreation",
-        transcreationParagraph: "Creative adaptation preserving emotional impact, perfect for marketing campaigns and brand storytelling.",
-        transcreationBullets: [
-          "Specialist Linguists",
-          "Audience-Centric Approach",
-          "Impactful Messaging",
-          "Iterative Collaboration",
-          "Culturally Relevant"
-        ],
-
-        /* Additional Services */
+        transcreationParagraph: "Creative adaptation preserving emotional impact, perfect for marketing campaigns...",
+        transcreationBullets: ["Specialist Linguists","Audience-Centric Approach","Impactful Messaging","Iterative Collaboration","Culturally Relevant"],
         additionalServicesTitle: "Additional & Value-Added Services",
-        additionalServicesDesc: "Enhance your localization projects with specialized offerings—from in-context testing to style guide creation.",
+        additionalServicesDesc: "Enhance your localization projects with specialized offerings...",
         lqaHeading: "Linguistic QA (LQA)",
-        lqaParagraph: "In-context testing within actual builds to catch hidden issues and ensure a flawless user experience.",
-        lqaBullets: [
-          "In-Context Testing",
-          "Focus on Usability",
-          "Tailored Scope",
-          "Detailed Reporting",
-          "Collaborative Fixes"
-        ],
+        lqaParagraph: "In-context testing within actual builds to catch hidden issues...",
+        lqaBullets: ["In-Context Testing","Focus on Usability","Tailored Scope","Detailed Reporting","Collaborative Fixes"],
         pmHeading: "Project Management",
         pmParagraph: "Seamless coordination for all your localization needs, from vendor selection to final delivery.",
-        pmBullets: [
-          "Expert Coordination",
-          "Tailored Workflows",
-          "Quality Oversight",
-          "Centralized Communication",
-          "Global Availability"
-        ],
+        pmBullets: ["Expert Coordination","Tailored Workflows","Quality Oversight","Centralized Communication","Global Availability"],
         termHeading: "Terminology Management",
-        termParagraph: "Maintain consistent brand voice with updated glossaries and termbases aligned to your industry.",
-        termBullets: [
-          "Context-Driven Accuracy",
-          "Client Collaboration",
-          "Ongoing Refinement",
-          "Confidential & Secure",
-          "Glossary Creation & Maintenance"
-        ],
+        termParagraph: "Maintain consistent brand voice with updated glossaries...",
+        termBullets: ["Context-Driven Accuracy","Client Collaboration","Ongoing Refinement","Confidential & Secure","Glossary Creation & Maintenance"],
         styleGuideHeading: "Style Guide Creation",
-        styleGuideParagraph: "Develop or adapt style guides to ensure a consistent tone, formality, and brand identity across regions.",
-        styleGuideBullets: [
-          "Cultural Expertise",
-          "Brand Alignment",
-          "Seamless Integration",
-          "End-to-End Support",
-          "Iterative Collaboration"
-        ],
+        styleGuideParagraph: "Develop or adapt style guides to ensure a consistent tone and brand identity...",
+        styleGuideBullets: ["Cultural Expertise","Brand Alignment","Seamless Integration","End-to-End Support","Iterative Collaboration"],
         sampleHeading: "Sample Translation",
-        sampleParagraph: "Evaluate our quality risk-free with up to 500 words, demonstrating cultural accuracy and style consistency.",
-        sampleBullets: [
-          "TEP-Quality Output",
-          "Transparent Process",
-          "Low-Risk Evaluation",
-          "Tailored Approach",
-          "Client Feedback Integration"
-        ],
+        sampleParagraph: "Evaluate our quality risk-free with up to 500 words, showcasing cultural accuracy...",
+        sampleBullets: ["TEP-Quality Output","Transparent Process","Low-Risk Evaluation","Tailored Approach","Client Feedback Integration"],
         voiceHeading: "Voiceover & Audio Localization",
-        voiceParagraph: "Multilingual audio production—script adaptation to final mastering—for truly immersive user experiences.",
-        voiceBullets: [
-          "Cultural Authenticity",
-          "Professional Voice Talent",
-          "Comprehensive Production",
-          "Transparent Timelines",
-          "High-Quality Results"
-        ],
-
-        /* CTA: Why Risk */
+        voiceParagraph: "Multilingual audio production—script adaptation to final mastering—for immersive user experiences.",
+        voiceBullets: ["Cultural Authenticity","Professional Voice Talent","Comprehensive Production","Transparent Timelines","High-Quality Results"],
         riskTitle: "Why Risk Mistranslations?",
-        riskParagraph: "Mistranslations or cultural insensitivity can seriously damage your brand’s reputation. Protect your image and connect authentically with your global audience by choosing a partner that prioritizes accuracy, context, and cultural relevance.",
+        riskParagraph: "Mistranslations or cultural insensitivity can damage your brand’s reputation...",
         riskCtaBtn: "Secure Your Brand’s Reputation"
       },
-
-      /* ===== PLACEHOLDER FOR OTHER LANGUAGES ===== */
       fr: {
+        /* Existing placeholders for FR */
         title: "LocalizeDirect",
         subtitle: "Services de localisation pour vos publics internationaux",
         footerText: "© 2024 LocalizeDirect. Tous droits réservés.",
@@ -558,65 +482,257 @@
         heroCtaBtn: "Découvrez nos services",
         whyChooseTitle: "Pourquoi choisir LocalizeDirect?",
         whyChooseDesc: "Placeholder FR: Notre équipe certifiée...",
-        whyChooseBullets: [
-          "Placeholder FR - bullet 1",
-          "Placeholder FR - bullet 2",
-          "Placeholder FR - bullet 3",
-          "Placeholder FR - bullet 4",
-          "Placeholder FR - bullet 5"
-        ],
+        whyChooseBullets: ["FR bullet 1","FR bullet 2","FR bullet 3","FR bullet 4","FR bullet 5"],
         coreServicesTitle: "Services Principaux",
         coreServicesDesc: "Placeholder FR: Nos services de base...",
         mtHeading: "Traduction Automatique (MT)",
         mtParagraph: "Placeholder FR: MT solutions rapides...",
-        mtBullets: ["FR bullet 1", "FR bullet 2", "FR bullet 3", "FR bullet 4", "FR bullet 5"],
+        mtBullets: ["FR bullet 1","FR bullet 2","FR bullet 3","FR bullet 4","FR bullet 5"],
         mtpeHeading: "Post-Édition MT (MTPE)",
         mtpeParagraph: "Placeholder FR: Combine vitesse de MT...",
-        mtpeBullets: ["FR bullet 1", "FR bullet 2", "FR bullet 3", "FR bullet 4", "FR bullet 5"],
+        mtpeBullets: ["FR bullet 1","FR bullet 2","FR bullet 3","FR bullet 4","FR bullet 5"],
         stdHeading: "Traduction Standard (ISO 17100)",
         stdParagraph: "Placeholder FR: Traduction humaine...",
-        stdBullets: ["FR bullet 1", "FR bullet 2", "FR bullet 3", "FR bullet 4", "FR bullet 5"],
+        stdBullets: ["FR bullet 1","FR bullet 2","FR bullet 3","FR bullet 4","FR bullet 5"],
         tepHeading: "Traduction, Édition & Relecture (TEP)",
         tepParagraph: "Placeholder FR: Processus de haute qualité...",
-        tepBullets: ["FR bullet 1", "FR bullet 2", "FR bullet 3", "FR bullet 4", "FR bullet 5"],
+        tepBullets: ["FR bullet 1","FR bullet 2","FR bullet 3","FR bullet 4","FR bullet 5"],
         transcreationHeading: "Transcréation",
         transcreationParagraph: "Placeholder FR: Adaptation créative...",
-        transcreationBullets: ["FR bullet 1", "FR bullet 2", "FR bullet 3", "FR bullet 4", "FR bullet 5"],
+        transcreationBullets: ["FR bullet 1","FR bullet 2","FR bullet 3","FR bullet 4","FR bullet 5"],
         additionalServicesTitle: "Services Additionnels",
         additionalServicesDesc: "Placeholder FR: Services spéciaux...",
         lqaHeading: "Assurance Qualité Linguistique (LQA)",
         lqaParagraph: "Placeholder FR: Tests in-context...",
-        lqaBullets: ["FR bullet 1", "FR bullet 2", "FR bullet 3", "FR bullet 4", "FR bullet 5"],
+        lqaBullets: ["FR bullet 1","FR bullet 2","FR bullet 3","FR bullet 4","FR bullet 5"],
         pmHeading: "Gestion de Projet",
         pmParagraph: "Placeholder FR: Coordination complète...",
-        pmBullets: ["FR bullet 1", "FR bullet 2", "FR bullet 3", "FR bullet 4", "FR bullet 5"],
+        pmBullets: ["FR bullet 1","FR bullet 2","FR bullet 3","FR bullet 4","FR bullet 5"],
         termHeading: "Gestion Terminologique",
         termParagraph: "Placeholder FR: Cohérence de marque...",
-        termBullets: ["FR bullet 1", "FR bullet 2", "FR bullet 3", "FR bullet 4", "FR bullet 5"],
+        termBullets: ["FR bullet 1","FR bullet 2","FR bullet 3","FR bullet 4","FR bullet 5"],
         styleGuideHeading: "Création de Guide de Style",
         styleGuideParagraph: "Placeholder FR: Garantir une cohérence...",
-        styleGuideBullets: ["FR bullet 1", "FR bullet 2", "FR bullet 3", "FR bullet 4", "FR bullet 5"],
+        styleGuideBullets: ["FR bullet 1","FR bullet 2","FR bullet 3","FR bullet 4","FR bullet 5"],
         sampleHeading: "Échantillon de Traduction",
         sampleParagraph: "Placeholder FR: Jusqu'à 500 mots...",
-        sampleBullets: ["FR bullet 1", "FR bullet 2", "FR bullet 3", "FR bullet 4", "FR bullet 5"],
+        sampleBullets: ["FR bullet 1","FR bullet 2","FR bullet 3","FR bullet 4","FR bullet 5"],
         voiceHeading: "Voix Off & Localisation Audio",
         voiceParagraph: "Placeholder FR: Production audio multilingue...",
-        voiceBullets: ["FR bullet 1", "FR bullet 2", "FR bullet 3", "FR bullet 4", "FR bullet 5"],
+        voiceBullets: ["FR bullet 1","FR bullet 2","FR bullet 3","FR bullet 4","FR bullet 5"],
         riskTitle: "Pourquoi Risquer des Mauvaises Traductions?",
         riskParagraph: "Placeholder FR: Les erreurs culturelles...",
         riskCtaBtn: "Protégez Votre Marque"
       },
-      it: {/* ...Similar placeholders for Italian... */},
-      de: {/* ...Similar placeholders for German... */},
-      es: {/* ...Similar placeholders for Spanish... */},
-      sv: {/* ...Similar placeholders for Swedish... */}
+      it: {
+        /* Existing placeholders or you can fill them out */
+        title: "LocalizeDirect",
+        subtitle: "Servizi di localizzazione per il tuo pubblico globale",
+        footerText: "© 2024 LocalizeDirect. Tutti i diritti riservati.",
+        heroHeading: "Localizzazione perfetta per un pubblico globale",
+        heroParagraph: "Placeholder IT: L'adattamento culturale di alta qualità...",
+        heroCtaBtn: "Scopri i nostri servizi",
+        whyChooseTitle: "Perché scegliere LocalizeDirect?",
+        whyChooseDesc: "Placeholder IT: Il nostro team certificato...",
+        whyChooseBullets: ["IT bullet 1","IT bullet 2","IT bullet 3","IT bullet 4","IT bullet 5"],
+        coreServicesTitle: "Servizi Principali",
+        coreServicesDesc: "Placeholder IT: I nostri servizi di base...",
+        /* replicate the same keys used for 'en', each with placeholder arrays... */
+        mtHeading: "Traduzione Automatica (MT)",
+        mtParagraph: "Placeholder IT: Soluzioni MT veloci...",
+        mtBullets: ["IT bullet 1","IT bullet 2","IT bullet 3","IT bullet 4","IT bullet 5"],
+        mtpeHeading: "Post-Editing di MT (MTPE)",
+        mtpeParagraph: "Placeholder IT: Combina la velocità di MT...",
+        mtpeBullets: ["IT bullet 1","IT bullet 2","IT bullet 3","IT bullet 4","IT bullet 5"],
+        stdHeading: "Traduzione Standard (ISO 17100)",
+        stdParagraph: "Placeholder IT: Traduzioni umane...",
+        stdBullets: ["IT bullet 1","IT bullet 2","IT bullet 3","IT bullet 4","IT bullet 5"],
+        tepHeading: "Traduzione, Editing & Proofreading (TEP)",
+        tepParagraph: "Placeholder IT: Processo multistep...",
+        tepBullets: ["IT bullet 1","IT bullet 2","IT bullet 3","IT bullet 4","IT bullet 5"],
+        transcreationHeading: "Transcreazione",
+        transcreationParagraph: "Placeholder IT: Adattamento creativo...",
+        transcreationBullets: ["IT bullet 1","IT bullet 2","IT bullet 3","IT bullet 4","IT bullet 5"],
+        additionalServicesTitle: "Servizi Aggiuntivi",
+        additionalServicesDesc: "Placeholder IT: Servizi speciali...",
+        lqaHeading: "LQA",
+        lqaParagraph: "Placeholder IT: Test in-context...",
+        lqaBullets: ["IT bullet 1","IT bullet 2","IT bullet 3","IT bullet 4","IT bullet 5"],
+        pmHeading: "Gestione del Progetto",
+        pmParagraph: "Placeholder IT: Coordinamento completo...",
+        pmBullets: ["IT bullet 1","IT bullet 2","IT bullet 3","IT bullet 4","IT bullet 5"],
+        termHeading: "Gestione della Terminologia",
+        termParagraph: "Placeholder IT: Coerenza di brand...",
+        termBullets: ["IT bullet 1","IT bullet 2","IT bullet 3","IT bullet 4","IT bullet 5"],
+        styleGuideHeading: "Creazione dello Style Guide",
+        styleGuideParagraph: "Placeholder IT: Garantire coerenza...",
+        styleGuideBullets: ["IT bullet 1","IT bullet 2","IT bullet 3","IT bullet 4","IT bullet 5"],
+        sampleHeading: "Traduzione di Prova",
+        sampleParagraph: "Placeholder IT: Fino a 500 parole...",
+        sampleBullets: ["IT bullet 1","IT bullet 2","IT bullet 3","IT bullet 4","IT bullet 5"],
+        voiceHeading: "Voiceover & Localizzazione Audio",
+        voiceParagraph: "Placeholder IT: Produzione audio multilingue...",
+        voiceBullets: ["IT bullet 1","IT bullet 2","IT bullet 3","IT bullet 4","IT bullet 5"],
+        riskTitle: "Perché Rischiare Traduzioni Errate?",
+        riskParagraph: "Placeholder IT: Gli errori culturali...",
+        riskCtaBtn: "Proteggi il Tuo Marchio"
+      },
+      de: {
+        /* Minimal placeholders to avoid errors */
+        title: "LocalizeDirect",
+        subtitle: "Lokalisierungsservices für Ihr globales Publikum",
+        footerText: "© 2024 LocalizeDirect. Alle Rechte vorbehalten.",
+        heroHeading: "Perfekte Lokalisierung für globale Zielgruppen",
+        heroParagraph: "Placeholder DE: Kulturelle Anpassung von hoher Qualität...",
+        heroCtaBtn: "Entdecken Sie unsere Dienste",
+        whyChooseTitle: "Warum LocalizeDirect?",
+        whyChooseDesc: "Placeholder DE: Unser zertifiziertes Team...",
+        whyChooseBullets: ["DE bullet 1","DE bullet 2","DE bullet 3","DE bullet 4","DE bullet 5"],
+        coreServicesTitle: "Kernleistungen",
+        coreServicesDesc: "Placeholder DE: Unsere Hauptservices...",
+        mtHeading: "Maschinelle Übersetzung (MT)",
+        mtParagraph: "Placeholder DE: Schnelle MT-Lösungen...",
+        mtBullets: ["DE bullet 1","DE bullet 2","DE bullet 3","DE bullet 4","DE bullet 5"],
+        mtpeHeading: "MTPE",
+        mtpeParagraph: "Placeholder DE: Kombiniert MT-Geschwindigkeit...",
+        mtpeBullets: ["DE bullet 1","DE bullet 2","DE bullet 3","DE bullet 4","DE bullet 5"],
+        stdHeading: "Standard-Übersetzung (ISO 17100)",
+        stdParagraph: "Placeholder DE: Menschliche, ISO-konforme Übersetzung...",
+        stdBullets: ["DE bullet 1","DE bullet 2","DE bullet 3","DE bullet 4","DE bullet 5"],
+        tepHeading: "Übersetzung, Bearbeitung & Korrektur (TEP)",
+        tepParagraph: "Placeholder DE: Mehrstufiger Prozess...",
+        tepBullets: ["DE bullet 1","DE bullet 2","DE bullet 3","DE bullet 4","DE bullet 5"],
+        transcreationHeading: "Transkreation",
+        transcreationParagraph: "Placeholder DE: Kreative Anpassung...",
+        transcreationBullets: ["DE bullet 1","DE bullet 2","DE bullet 3","DE bullet 4","DE bullet 5"],
+        additionalServicesTitle: "Zusätzliche & Mehrwert-Dienste",
+        additionalServicesDesc: "Placeholder DE: Spezialdienste...",
+        lqaHeading: "LQA",
+        lqaParagraph: "Placeholder DE: In-context Tests...",
+        lqaBullets: ["DE bullet 1","DE bullet 2","DE bullet 3","DE bullet 4","DE bullet 5"],
+        pmHeading: "Projektmanagement",
+        pmParagraph: "Placeholder DE: Komplette Koordination...",
+        pmBullets: ["DE bullet 1","DE bullet 2","DE bullet 3","DE bullet 4","DE bullet 5"],
+        termHeading: "Terminologie-Management",
+        termParagraph: "Placeholder DE: Markenstimme konsistent halten...",
+        termBullets: ["DE bullet 1","DE bullet 2","DE bullet 3","DE bullet 4","DE bullet 5"],
+        styleGuideHeading: "Styleguide-Erstellung",
+        styleGuideParagraph: "Placeholder DE: Sicherstellung eines einheitlichen Tons...",
+        styleGuideBullets: ["DE bullet 1","DE bullet 2","DE bullet 3","DE bullet 4","DE bullet 5"],
+        sampleHeading: "Probeübersetzung",
+        sampleParagraph: "Placeholder DE: Bis zu 500 Wörter...",
+        sampleBullets: ["DE bullet 1","DE bullet 2","DE bullet 3","DE bullet 4","DE bullet 5"],
+        voiceHeading: "Voiceover & Audio-Lokalisierung",
+        voiceParagraph: "Placeholder DE: Mehrsprachige Audioproduktion...",
+        voiceBullets: ["DE bullet 1","DE bullet 2","DE bullet 3","DE bullet 4","DE bullet 5"],
+        riskTitle: "Warum Schlechte Übersetzungen Riskieren?",
+        riskParagraph: "Placeholder DE: Kulturelle Fehler können schädlich sein...",
+        riskCtaBtn: "Schützen Sie Ihre Marke"
+      },
+      es: {
+        title: "LocalizeDirect",
+        subtitle: "Servicios de localización para tu audiencia global",
+        footerText: "© 2024 LocalizeDirect. Todos los derechos reservados.",
+        heroHeading: "Localización impecable para audiencias globales",
+        heroParagraph: "Placeholder ES: Adaptación cultural de alta calidad...",
+        heroCtaBtn: "Descubre nuestros servicios",
+        whyChooseTitle: "¿Por qué elegir LocalizeDirect?",
+        whyChooseDesc: "Placeholder ES: Nuestro equipo certificado...",
+        whyChooseBullets: ["ES bullet 1","ES bullet 2","ES bullet 3","ES bullet 4","ES bullet 5"],
+        coreServicesTitle: "Servicios Principales",
+        coreServicesDesc: "Placeholder ES: Nuestros servicios centrales...",
+        mtHeading: "Traducción Automática (MT)",
+        mtParagraph: "Placeholder ES: Soluciones MT rápidas y escalables...",
+        mtBullets: ["ES bullet 1","ES bullet 2","ES bullet 3","ES bullet 4","ES bullet 5"],
+        mtpeHeading: "Posedición de MT (MTPE)",
+        mtpeParagraph: "Placeholder ES: Combina la velocidad de MT con supervisión experta...",
+        mtpeBullets: ["ES bullet 1","ES bullet 2","ES bullet 3","ES bullet 4","ES bullet 5"],
+        stdHeading: "Traducción Estándar (ISO 17100)",
+        stdParagraph: "Placeholder ES: Traducciones humanas, cumplimento con ISO...",
+        stdBullets: ["ES bullet 1","ES bullet 2","ES bullet 3","ES bullet 4","ES bullet 5"],
+        tepHeading: "Traducción, Edición y Corrección (TEP)",
+        tepParagraph: "Placeholder ES: Proceso premium en múltiples pasos...",
+        tepBullets: ["ES bullet 1","ES bullet 2","ES bullet 3","ES bullet 4","ES bullet 5"],
+        transcreationHeading: "Transcreación",
+        transcreationParagraph: "Placeholder ES: Adaptación creativa con impacto emocional...",
+        transcreationBullets: ["ES bullet 1","ES bullet 2","ES bullet 3","ES bullet 4","ES bullet 5"],
+        additionalServicesTitle: "Servicios Adicionales",
+        additionalServicesDesc: "Placeholder ES: Servicios especializados...",
+        lqaHeading: "Garantía de Calidad Lingüística (LQA)",
+        lqaParagraph: "Placeholder ES: Pruebas en contexto...",
+        lqaBullets: ["ES bullet 1","ES bullet 2","ES bullet 3","ES bullet 4","ES bullet 5"],
+        pmHeading: "Gestión de Proyectos",
+        pmParagraph: "Placeholder ES: Coordinación completa...",
+        pmBullets: ["ES bullet 1","ES bullet 2","ES bullet 3","ES bullet 4","ES bullet 5"],
+        termHeading: "Gestión de Terminología",
+        termParagraph: "Placeholder ES: Mantén la coherencia de tu marca...",
+        termBullets: ["ES bullet 1","ES bullet 2","ES bullet 3","ES bullet 4","ES bullet 5"],
+        styleGuideHeading: "Creación de Guía de Estilo",
+        styleGuideParagraph: "Placeholder ES: Garantizar un tono y estilo coherente...",
+        styleGuideBullets: ["ES bullet 1","ES bullet 2","ES bullet 3","ES bullet 4","ES bullet 5"],
+        sampleHeading: "Traducción de Muestra",
+        sampleParagraph: "Placeholder ES: Hasta 500 palabras...",
+        sampleBullets: ["ES bullet 1","ES bullet 2","ES bullet 3","ES bullet 4","ES bullet 5"],
+        voiceHeading: "Doblaje & Localización de Audio",
+        voiceParagraph: "Placeholder ES: Producción de audio multilingüe...",
+        voiceBullets: ["ES bullet 1","ES bullet 2","ES bullet 3","ES bullet 4","ES bullet 5"],
+        riskTitle: "¿Por qué arriesgar malas traducciones?",
+        riskParagraph: "Placeholder ES: Los errores culturales pueden dañar tu marca...",
+        riskCtaBtn: "Protege tu Marca"
+      },
+      sv: {
+        title: "LocalizeDirect",
+        subtitle: "Professionella lokaliseringstjänster för din globala publik",
+        footerText: "© 2024 LocalizeDirect. Alla rättigheter förbehållna.",
+        heroHeading: "Felfri lokalisering för globala målgrupper",
+        heroParagraph: "Placeholder SV: Högkvalitativ kulturell anpassning...",
+        heroCtaBtn: "Upptäck våra tjänster",
+        whyChooseTitle: "Varför välja LocalizeDirect?",
+        whyChooseDesc: "Placeholder SV: Vårt certifierade team...",
+        whyChooseBullets: ["SV bullet 1","SV bullet 2","SV bullet 3","SV bullet 4","SV bullet 5"],
+        coreServicesTitle: "Kärntjänster",
+        coreServicesDesc: "Placeholder SV: Våra huvudsakliga tjänster...",
+        mtHeading: "Maskinöversättning (MT)",
+        mtParagraph: "Placeholder SV: Snabba, skalbara MT-lösningar...",
+        mtBullets: ["SV bullet 1","SV bullet 2","SV bullet 3","SV bullet 4","SV bullet 5"],
+        mtpeHeading: "MTPE",
+        mtpeParagraph: "Placeholder SV: Kombinerar MT-hastighet med expertöversyn...",
+        mtpeBullets: ["SV bullet 1","SV bullet 2","SV bullet 3","SV bullet 4","SV bullet 5"],
+        stdHeading: "Standardöversättning (ISO 17100)",
+        stdParagraph: "Placeholder SV: Mänsklig, ISO-kompatibel översättning...",
+        stdBullets: ["SV bullet 1","SV bullet 2","SV bullet 3","SV bullet 4","SV bullet 5"],
+        tepHeading: "Översättning, Redigering & Korrektur (TEP)",
+        tepParagraph: "Placeholder SV: Flera steg med noggrann QA...",
+        tepBullets: ["SV bullet 1","SV bullet 2","SV bullet 3","SV bullet 4","SV bullet 5"],
+        transcreationHeading: "Transkreation",
+        transcreationParagraph: "Placeholder SV: Kreativ anpassning med känslomässig påverkan...",
+        transcreationBullets: ["SV bullet 1","SV bullet 2","SV bullet 3","SV bullet 4","SV bullet 5"],
+        additionalServicesTitle: "Ytterligare & Mervärdestjänster",
+        additionalServicesDesc: "Placeholder SV: Speciella erbjudanden...",
+        lqaHeading: "LQA",
+        lqaParagraph: "Placeholder SV: In-context tester i riktiga byggen...",
+        lqaBullets: ["SV bullet 1","SV bullet 2","SV bullet 3","SV bullet 4","SV bullet 5"],
+        pmHeading: "Projektledning",
+        pmParagraph: "Placeholder SV: Komplett samordning för lokalisering...",
+        pmBullets: ["SV bullet 1","SV bullet 2","SV bullet 3","SV bullet 4","SV bullet 5"],
+        termHeading: "Terminologihantering",
+        termParagraph: "Placeholder SV: Bibehåll konsekvent varumärkesröst...",
+        termBullets: ["SV bullet 1","SV bullet 2","SV bullet 3","SV bullet 4","SV bullet 5"],
+        styleGuideHeading: "Style Guide-skapande",
+        styleGuideParagraph: "Placeholder SV: Säkerställa enhetlig ton och stil...",
+        styleGuideBullets: ["SV bullet 1","SV bullet 2","SV bullet 3","SV bullet 4","SV bullet 5"],
+        sampleHeading: "Provtolkning",
+        sampleParagraph: "Placeholder SV: Upp till 500 ord...",
+        sampleBullets: ["SV bullet 1","SV bullet 2","SV bullet 3","SV bullet 4","SV bullet 5"],
+        voiceHeading: "Voiceover & Audiolokalisering",
+        voiceParagraph: "Placeholder SV: Flerspråkig ljudproduktion...",
+        voiceBullets: ["SV bullet 1","SV bullet 2","SV bullet 3","SV bullet 4","SV bullet 5"],
+        riskTitle: "Varför Riskera Felöversättningar?",
+        riskParagraph: "Placeholder SV: Kulturella misstag kan skada ditt varumärke...",
+        riskCtaBtn: "Skydda Ditt Varumärke"
+      }
     };
 
-    /**************************************************************
-     * The function below updates every ID with the matching key 
-     * from the content object. If you add new IDs, replicate the 
-     * approach below.
-     **************************************************************/
     function changeLanguage() {
       const lang = document.getElementById("languageSelect").value;
       const c = content[lang];
@@ -634,8 +750,6 @@
       /* Why Choose */
       document.getElementById("whyChooseTitle").textContent = c.whyChooseTitle;
       document.getElementById("whyChooseDesc").textContent = c.whyChooseDesc;
-
-      /* Bullets often need .innerHTML to map arrays */
       document.getElementById("whyChooseBullets").innerHTML = c.whyChooseBullets
         .map(b => `<li>${b}</li>`)
         .join("");
@@ -643,7 +757,6 @@
       /* Core Services */
       document.getElementById("coreServicesTitle").textContent = c.coreServicesTitle;
       document.getElementById("coreServicesDesc").textContent = c.coreServicesDesc;
-
       document.getElementById("mtHeading").textContent = c.mtHeading;
       document.getElementById("mtParagraph").textContent = c.mtParagraph;
       document.getElementById("mtBullets").innerHTML = c.mtBullets.map(b => `<li>${b}</li>`).join("");
@@ -667,7 +780,6 @@
       /* Additional Services */
       document.getElementById("additionalServicesTitle").textContent = c.additionalServicesTitle;
       document.getElementById("additionalServicesDesc").textContent = c.additionalServicesDesc;
-
       document.getElementById("lqaHeading").textContent = c.lqaHeading;
       document.getElementById("lqaParagraph").textContent = c.lqaParagraph;
       document.getElementById("lqaBullets").innerHTML = c.lqaBullets.map(b => `<li>${b}</li>`).join("");

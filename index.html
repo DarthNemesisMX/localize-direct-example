@@ -65,4 +65,452 @@
     .cta {
       display: inline-block;
       margin-top: 1rem;
-      padding: 0.8re
+      padding: 0.8rem 1.5rem;
+      background-color: #28a745;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .cta:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title"></h1>
+    <p id="subtitle"></p>
+    <select id="languageSelect" onchange="changeLanguage()">
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="it">Italiano</option>
+      <option value="de">Deutsch</option>
+      <option value="es">Español</option>
+    </select>
+  </header>
+  
+  <main>
+    <!-- MACHINE TRANSLATION -->
+    <section>
+      <h2 id="mtTitle"></h2>
+      <p id="mtDesc"></p>
+      <ul id="mtBullets"></ul>
+      <p id="mtNote"></p>
+    </section>
+
+    <!-- MTPE -->
+    <section>
+      <h2 id="mtpeTitle"></h2>
+      <p id="mtpeDesc"></p>
+      <ul id="mtpeBullets"></ul>
+    </section>
+
+    <!-- STANDARD TRANSLATION -->
+    <section>
+      <h2 id="stdTransTitle"></h2>
+      <p id="stdTransDesc"></p>
+      <ul id="stdTransBullets"></ul>
+    </section>
+
+    <!-- TEP -->
+    <section>
+      <h2 id="tepTitle"></h2>
+      <p id="tepDesc"></p>
+    </section>
+
+    <!-- TRANSCREATION -->
+    <section>
+      <h2 id="transcreationTitle"></h2>
+      <p id="transcreationDesc"></p>
+    </section>
+
+    <!-- LQA -->
+    <section>
+      <h2 id="lqaTitle"></h2>
+      <p id="lqaDesc"></p>
+    </section>
+
+    <!-- PROJECT MANAGEMENT -->
+    <section>
+      <h2 id="pmTitle"></h2>
+      <p id="pmDesc"></p>
+    </section>
+
+    <!-- TERMINOLOGY MANAGEMENT -->
+    <section>
+      <h2 id="termMgmtTitle"></h2>
+      <p id="termMgmtDesc"></p>
+    </section>
+
+    <!-- STYLE GUIDE -->
+    <section>
+      <h2 id="styleGuideTitle"></h2>
+      <p id="styleGuideDesc"></p>
+    </section>
+
+    <!-- SAMPLE TRANSLATION -->
+    <section>
+      <h2 id="sampleTitle"></h2>
+      <p id="sampleDesc"></p>
+    </section>
+
+    <!-- VOICEOVER & AUDIO LOCALIZATION -->
+    <section>
+      <h2 id="voiceTitle"></h2>
+      <p id="voiceDesc"></p>
+    </section>
+
+    <a href="#" class="cta" id="ctaBtn"></a>
+  </main>
+
+  <footer>
+    <p id="footerText"></p>
+  </footer>
+
+  <script>
+    // Full translations for English, French, Italian, German, Spanish (placeholder text).
+    // Replace these with your real translations if needed.
+
+    const content = {
+      en: {
+        title: "LocalizeDirect",
+        subtitle: "Premier Localization Services for Your Global Audience",
+        footerText: "© 2024 LocalizeDirect. All rights reserved.",
+        ctaBtn: "Contact Us",
+        // --- Machine Translation ---
+        mtTitle: "Machine Translation (MT)",
+        mtDesc: "Secure, high-volume translation using AI-driven NMT engines for non-critical content.",
+        mtBullets: [
+          "Confidentiality Assurance",
+          "Terminology & Context Alignment",
+          "Organized, Ready-to-Use Deliverables",
+          "Client-Centric Workflow",
+          "Customized Prompting Expertise (Add-On)"
+        ],
+        mtNote: "Key Note: We use a standard MT engine but optimize through proprietary workflows.",
+        // --- MTPE ---
+        mtpeTitle: "Machine Translation Post-Editing (MTPE)",
+        mtpeDesc: "Combines speed of MT with human expertise for accurate, contextually correct translations.",
+        mtpeBullets: [
+          "Expert-Led Review for Critical Errors",
+          "Terminology & Context Alignment",
+          "Data Security via NDA",
+          "Tailored Processes",
+          "Scalability & Flexibility"
+        ],
+        // --- Standard Translation ---
+        stdTransTitle: "Standard Translation (ISO 17100:2015)",
+        stdTransDesc: "Human-powered, culturally sensitive translation for content requiring professional standards.",
+        stdTransBullets: [
+          "Native Translators",
+          "Industry Expertise",
+          "Gaming Specialization",
+          "ISO Compliance",
+          "Cultural Sensitivity"
+        ],
+        // --- TEP ---
+        tepTitle: "Translation, Editing & Proofreading (TEP)",
+        tepDesc: "Premium multi-step process ensuring publication-ready results with rigorous QA.",
+        // --- Transcreation ---
+        transcreationTitle: "Transcreation",
+        transcreationDesc: "Creative adaptation preserving intent, tone, and emotional impact for marketing and campaigns.",
+        // --- LQA ---
+        lqaTitle: "Linguistic Quality Assurance (LQA)",
+        lqaDesc: "In-context testing to catch cultural, UI, and linguistic issues in real environments.",
+        // --- PM ---
+        pmTitle: "Project Management",
+        pmDesc: "Seamless execution from start to finish: planning, vendor coordination, and QA oversight.",
+        // --- Terminology Management ---
+        termMgmtTitle: "Terminology Management",
+        termMgmtDesc: "Accurate, context-driven term usage to maintain brand consistency and clarity.",
+        // --- Style Guide Creation ---
+        styleGuideTitle: "Style Guide Creation/Adaptation",
+        styleGuideDesc: "Ensures cohesive tone, style, and terminology adapted to local preferences.",
+        // --- Sample Translation ---
+        sampleTitle: "Sample Translation",
+        sampleDesc: "Up to 500 words to preview our quality, accuracy, and cultural alignment.",
+        // --- Voiceover & Audio Localization ---
+        voiceTitle: "Voiceover & Audio Localization",
+        voiceDesc: "Professional voice talent and multilingual audio production for immersive user experiences."
+      },
+
+      fr: {
+        title: "LocalizeDirect",
+        subtitle: "Services de localisation pour vos publics internationaux",
+        footerText: "© 2024 LocalizeDirect. Tous droits réservés.",
+        ctaBtn: "Contactez-nous",
+        mtTitle: "Traduction Automatique (MT)",
+        mtDesc: "Traduction IA sécurisée et à fort volume pour le contenu non critique.",
+        mtBullets: [
+          "Assurance de confidentialité",
+          "Terminologie & contexte alignés",
+          "Livrables organisés",
+          "Flux de travail client-centrique",
+          "Expertise d'invite personnalisée"
+        ],
+        mtNote: "Remarque : Nous utilisons un moteur MT standard optimisé par nos flux de travail.",
+        mtpeTitle: "Post-Édition de Traduction Automatique (MTPE)",
+        mtpeDesc: "Associe la rapidité de la TA à l'expertise humaine pour plus de précision.",
+        mtpeBullets: [
+          "Révision experte des erreurs critiques",
+          "Alignement terminologique",
+          "Sécurité des données avec NDA",
+          "Processus sur mesure",
+          "Évolutivité & flexibilité"
+        ],
+        stdTransTitle: "Traduction Standard (ISO 17100:2015)",
+        stdTransDesc: "Traduction humaine et sensible à la culture pour un contenu professionnel.",
+        stdTransBullets: [
+          "Traducteurs natifs",
+          "Expertise de l'industrie",
+          "Spécialisation en jeu",
+          "Conformité ISO",
+          "Sensibilité culturelle"
+        ],
+        tepTitle: "Traduction, Édition & Relecture (TEP)",
+        tepDesc: "Processus premium en plusieurs étapes garantissant une qualité prête à la publication.",
+        transcreationTitle: "Transcréation",
+        transcreationDesc: "Adaptation créative pour préserver le ton et l’impact émotionnel dans vos campagnes.",
+        lqaTitle: "Assurance Qualité Linguistique (LQA)",
+        lqaDesc: "Tests in-context pour détecter les problèmes linguistiques, culturels et d'interface.",
+        pmTitle: "Gestion de Projet",
+        pmDesc: "Exécution fluide de A à Z : planification, coordination et contrôle qualité.",
+        termMgmtTitle: "Gestion de la Terminologie",
+        termMgmtDesc: "Utilisation précise des termes pour une cohérence et une clarté de marque.",
+        styleGuideTitle: "Création/Adaptation de Guide de Style",
+        styleGuideDesc: "Uniformité du ton et du style, adaptée aux préférences locales.",
+        sampleTitle: "Échantillon de Traduction",
+        sampleDesc: "Jusqu'à 500 mots pour évaluer la qualité et l’adéquation culturelle.",
+        voiceTitle: "Voix-Off & Localisation Audio",
+        voiceDesc: "Talents vocaux professionnels et production audio multilingue pour des expériences immersives."
+      },
+
+      it: {
+        title: "LocalizeDirect",
+        subtitle: "Servizi di localizzazione per il tuo pubblico globale",
+        footerText: "© 2024 LocalizeDirect. Tutti i diritti riservati.",
+        ctaBtn: "Contattaci",
+        mtTitle: "Traduzione Automatica (MT)",
+        mtDesc: "Traduzione ad alto volume e sicura con motori NMT per contenuti non critici.",
+        mtBullets: [
+          "Garanzia di riservatezza",
+          "Allineamento terminologico e contestuale",
+          "Consegne organizzate e pronte all’uso",
+          "Workflow incentrato sul cliente",
+          "Prompting personalizzato (opzionale)"
+        ],
+        mtNote: "Nota: Usiamo un motore MT standard ottimizzato dai nostri processi.",
+        mtpeTitle: "Post-Editing di MT (MTPE)",
+        mtpeDesc: "Combina la velocità della traduzione automatica con l’esperienza umana.",
+        mtpeBullets: [
+          "Revisione esperta degli errori critici",
+          "Allineamento terminologico",
+          "Sicurezza dei dati con NDA",
+          "Processi personalizzati",
+          "Flessibilità ed espandibilità"
+        ],
+        stdTransTitle: "Traduzione Standard (ISO 17100:2015)",
+        stdTransDesc: "Traduzione umana, sensibile alle culture, per contenuti professionali.",
+        stdTransBullets: [
+          "Traduttori madrelingua",
+          "Esperienza settoriale",
+          "Specializzazione nel gaming",
+          "Conformità ISO",
+          "Sensibilità culturale"
+        ],
+        tepTitle: "Traduzione, Editing & Proofreading (TEP)",
+        tepDesc: "Processo premium in più fasi per risultati pronti alla pubblicazione.",
+        transcreationTitle: "Transcreazione",
+        transcreationDesc: "Adattamento creativo per preservare tono e impatto emotivo nelle campagne.",
+        lqaTitle: "Assicurazione Qualità Linguistica (LQA)",
+        lqaDesc: "Test in-context per individuare problemi linguistici, culturali e di UI.",
+        pmTitle: "Gestione del Progetto",
+        pmDesc: "Esecuzione senza intoppi dalla pianificazione al controllo di qualità.",
+        termMgmtTitle: "Gestione della Terminologia",
+        termMgmtDesc: "Uso accurato dei termini per garantire coerenza e chiarezza del marchio.",
+        styleGuideTitle: "Creazione/Adattamento di Style Guide",
+        styleGuideDesc: "Coerenza di tono e stile, adattata alle preferenze locali.",
+        sampleTitle: "Traduzione di Prova",
+        sampleDesc: "Fino a 500 parole per valutare la nostra qualità e l’allineamento culturale.",
+        voiceTitle: "Voiceover & Localizzazione Audio",
+        voiceDesc: "Talenti vocali professionali e produzione audio multilingue per esperienze coinvolgenti."
+      },
+
+      de: {
+        title: "LocalizeDirect",
+        subtitle: "Lokalisierungsservices für Ihr globales Publikum",
+        footerText: "© 2024 LocalizeDirect. Alle Rechte vorbehalten.",
+        ctaBtn: "Kontaktieren Sie uns",
+        mtTitle: "Maschinelle Übersetzung (MT)",
+        mtDesc: "Sichere, hochvolumige Übersetzung mit NMT-Engines für nicht-kritische Inhalte.",
+        mtBullets: [
+          "Vertraulichkeit garantiert",
+          "Abstimmung von Terminologie & Kontext",
+          "Organisierte, einsatzbereite Lieferungen",
+          "Kundenorientierter Workflow",
+          "Angepasste Prompt-Expertise (Option)"
+        ],
+        mtNote: "Hinweis: Wir verwenden eine Standard-MT-Engine, optimiert durch unsere Workflows.",
+        mtpeTitle: "Maschinelle Übersetzung mit Post-Editing (MTPE)",
+        mtpeDesc: "Kombiniert die Geschwindigkeit von MT mit menschlicher Expertise für genaue Ergebnisse.",
+        mtpeBullets: [
+          "Experten-Review kritischer Fehler",
+          "Terminologie- und Kontextabgleich",
+          "Datensicherheit mit NDA",
+          "Maßgeschneiderte Prozesse",
+          "Skalierbar & flexibel"
+        ],
+        stdTransTitle: "Standard-Übersetzung (ISO 17100:2015)",
+        stdTransDesc: "Menschliche, kulturell sensible Übersetzung nach professionellen Standards.",
+        stdTransBullets: [
+          "Muttersprachliche Übersetzer",
+          "Branchenkenntnis",
+          "Gaming-Spezialisierung",
+          "ISO-Konformität",
+          "Kulturelle Sensibilität"
+        ],
+        tepTitle: "Übersetzung, Editing & Proofreading (TEP)",
+        tepDesc: "Premium-Mehrschrittverfahren für publikationsfertige Ergebnisse.",
+        transcreationTitle: "Transkreation",
+        transcreationDesc: "Kreative Anpassung für Marketing und Kampagnen, die den Kern des Inhalts bewahrt.",
+        lqaTitle: "Linguistic Quality Assurance (LQA)",
+        lqaDesc: "Kontextbezogene Tests zur Erkennung von sprachlichen, kulturellen und UI-bezogenen Problemen.",
+        pmTitle: "Projektmanagement",
+        pmDesc: "Reibungslose Durchführung von Anfang bis Ende: Planung, Koordination und Qualitätssicherung.",
+        termMgmtTitle: "Terminologie-Management",
+        termMgmtDesc: "Präziser, kontextbasierter Einsatz von Begriffen für eine konsistente Markenbotschaft.",
+        styleGuideTitle: "Styleguide-Erstellung/Anpassung",
+        styleGuideDesc: "Gewährleistet einheitlichen Ton und Stil, angepasst an lokale Vorlieben.",
+        sampleTitle: "Probeübersetzung",
+        sampleDesc: "Bis zu 500 Wörter, um unsere Qualität und kulturelle Genauigkeit zu prüfen.",
+        voiceTitle: "Voiceover & Audio-Lokalisierung",
+        voiceDesc: "Professionelle Sprecher & mehrsprachige Audioproduktion für fesselnde Erlebnisse."
+      },
+
+      es: {
+        title: "LocalizeDirect",
+        subtitle: "Servicios de localización para tu audiencia global",
+        footerText: "© 2024 LocalizeDirect. Todos los derechos reservados.",
+        ctaBtn: "Contáctanos",
+        mtTitle: "Traducción Automática (MT)",
+        mtDesc: "Traducción segura y de alto volumen con motores NMT para contenido no crítico.",
+        mtBullets: [
+          "Garantía de confidencialidad",
+          "Alineación de terminología y contexto",
+          "Entregables organizados y listos para usar",
+          "Flujo de trabajo centrado en el cliente",
+          "Experticia de prompts personalizados (opcional)"
+        ],
+        mtNote: "Nota: Utilizamos un motor MT estándar, optimizado mediante nuestros flujos de trabajo.",
+        mtpeTitle: "Posedición de Traducción Automática (MTPE)",
+        mtpeDesc: "Combina la velocidad de MT con la experiencia humana para lograr precisión.",
+        mtpeBullets: [
+          "Revisión experta de errores críticos",
+          "Alineación terminológica y contextual",
+          "Seguridad de datos con NDA",
+          "Procesos personalizados",
+          "Escalable y flexible"
+        ],
+        stdTransTitle: "Traducción Estándar (ISO 17100:2015)",
+        stdTransDesc: "Traducción humana, culturalmente sensible, ideal para materiales profesionales.",
+        stdTransBullets: [
+          "Traductores nativos",
+          "Experiencia en la industria",
+          "Especialización en gaming",
+          "Cumplimiento ISO",
+          "Sensibilidad cultural"
+        ],
+        tepTitle: "Traducción, Edición y Corrección (TEP)",
+        tepDesc: "Proceso premium en múltiples pasos para resultados listos para publicación.",
+        transcreationTitle: "Transcreación",
+        transcreationDesc: "Adaptación creativa que preserva la intención y el impacto emocional.",
+        lqaTitle: "Garantía de Calidad Lingüística (LQA)",
+        lqaDesc: "Pruebas en contexto para detectar problemas lingüísticos, culturales y de interfaz.",
+        pmTitle: "Gestión de Proyectos",
+        pmDesc: "Ejecución fluida de principio a fin: planificación, coordinación y control de calidad.",
+        termMgmtTitle: "Gestión de Terminología",
+        termMgmtDesc: "Uso preciso de la terminología para coherencia y claridad de marca.",
+        styleGuideTitle: "Creación/Adaptación de Guía de Estilo",
+        styleGuideDesc: "Asegura un tono y estilo coherentes adaptados a preferencias locales.",
+        sampleTitle: "Traducción de Muestra",
+        sampleDesc: "Hasta 500 palabras para evaluar nuestra calidad y adecuación cultural.",
+        voiceTitle: "Doblaje & Localización de Audio",
+        voiceDesc: "Talento de voz profesional y producción de audio multilingüe para experiencias inmersivas."
+      }
+    };
+
+    function changeLanguage() {
+      const lang = document.getElementById('languageSelect').value;
+      const c = content[lang];
+
+      // Header & Footer
+      document.getElementById('title').textContent = c.title;
+      document.getElementById('subtitle').textContent = c.subtitle;
+      document.getElementById('footerText').textContent = c.footerText;
+      document.getElementById('ctaBtn').textContent = c.ctaBtn;
+
+      // MT
+      document.getElementById('mtTitle').textContent = c.mtTitle;
+      document.getElementById('mtDesc').textContent = c.mtDesc;
+      document.getElementById('mtBullets').innerHTML = c.mtBullets
+        .map(b => `<li>${b}</li>`)
+        .join('');
+      document.getElementById('mtNote').textContent = c.mtNote;
+
+      // MTPE
+      document.getElementById('mtpeTitle').textContent = c.mtpeTitle;
+      document.getElementById('mtpeDesc').textContent = c.mtpeDesc;
+      document.getElementById('mtpeBullets').innerHTML = c.mtpeBullets
+        .map(b => `<li>${b}</li>`)
+        .join('');
+
+      // Standard Translation
+      document.getElementById('stdTransTitle').textContent = c.stdTransTitle;
+      document.getElementById('stdTransDesc').textContent = c.stdTransDesc;
+      document.getElementById('stdTransBullets').innerHTML = c.stdTransBullets
+        .map(b => `<li>${b}</li>`)
+        .join('');
+
+      // TEP
+      document.getElementById('tepTitle').textContent = c.tepTitle;
+      document.getElementById('tepDesc').textContent = c.tepDesc;
+
+      // Transcreation
+      document.getElementById('transcreationTitle').textContent = c.transcreationTitle;
+      document.getElementById('transcreationDesc').textContent = c.transcreationDesc;
+
+      // LQA
+      document.getElementById('lqaTitle').textContent = c.lqaTitle;
+      document.getElementById('lqaDesc').textContent = c.lqaDesc;
+
+      // Project Management
+      document.getElementById('pmTitle').textContent = c.pmTitle;
+      document.getElementById('pmDesc').textContent = c.pmDesc;
+
+      // Terminology Management
+      document.getElementById('termMgmtTitle').textContent = c.termMgmtTitle;
+      document.getElementById('termMgmtDesc').textContent = c.termMgmtDesc;
+
+      // Style Guide
+      document.getElementById('styleGuideTitle').textContent = c.styleGuideTitle;
+      document.getElementById('styleGuideDesc').textContent = c.styleGuideDesc;
+
+      // Sample Translation
+      document.getElementById('sampleTitle').textContent = c.sampleTitle;
+      document.getElementById('sampleDesc').textContent = c.sampleDesc;
+
+      // Voiceover & Audio
+      document.getElementById('voiceTitle').textContent = c.voiceTitle;
+      document.getElementById('voiceDesc').textContent = c.voiceDesc;
+    }
+
+    // Load English by default on page load
+    window.onload = () => {
+      document.getElementById('languageSelect').value = 'en';
+      changeLanguage();
+    };
+  </script>
+</body>
+</html>
